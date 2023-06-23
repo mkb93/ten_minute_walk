@@ -2,7 +2,7 @@ const tenMinWalk = require('./tenMinWalk.js')
 
 describe('tenMinWalk', ()=> {
   it('should return true if the array is of length 10', ()=>{
-    const response = tenMinWalk(['n','n','n','n','n','n','n','n','n','n']);
+    const response = tenMinWalk(['n','n','n','n','n','s','s','s','s','s']);
     expect(response).toEqual(true)
   })
   it('should return true if the array is of length 20', ()=>{
@@ -21,4 +21,9 @@ describe('tenMinWalk', ()=> {
     const response = tenMinWalk(['n']);
     expect(response).toEqual(false)
   })
+  it('should return false if array only goes north', ()=>{
+    const response = tenMinWalk(['n','n','n','n','n','n','n','n','n','n']);
+    expect(response).toEqual(false)
+  })
+
 })
